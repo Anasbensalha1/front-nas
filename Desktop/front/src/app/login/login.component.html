@@ -1,0 +1,24 @@
+<div class="p-3 mb-2 bg-light">
+    <div class ="row vh-100 align-items-center justify-content-center">  
+    <div class="col-sm-8 col-md-6 col-lg-4 bg-white rounded p-4 shadow">
+     <div class="row justify-content-center mb-4">
+       <img src="/assets/LeCNI.gif" class="w-25"/>
+     </div>
+  <form #f="ngForm" (ngSubmit)="login(f)">
+    <div class="mb-4">
+      <input name="mail" #mail="ngModel"  required ngModel type="email" class="form-control" id="identifiant" placeholder="Identifiant" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+      <div class="form-text"> ex : axxxxxx@cni.tn</div>
+    </div>
+  
+    <div class="mb-4">
+      <input name="password" password="ngModel" required ngModel type="password" class="form-control" id="motdepasse" placeholder="Mot de passe">
+    </div>
+    <div class="mb-4 text-decoration-underline">
+     <a href="">Mot de passe oublié?</a>
+   </div>
+    <div class="col-12">
+      <button type="submit" [disabled]="f.invalid" class="btn btn-primary w-100" >Connexion</button>
+    </div>
+  </form>
+  </div>
+  </div>
